@@ -71,10 +71,10 @@ if (typeof window.IntersectionObserver === 'function' && !scrollMotion.matches) 
       visibleElements.add(entry.target);
       if (!hasScrolled || scrollMotion.matches) continue;
       entry.target.animate([
-        { opacity: 0, transform: `translateY(${scrollDirection * 10}px)` },
+        { opacity: 0, transform: `translateY(${scrollDirection * 18}px)` },
         { opacity: 1, transform: 'translateY(0)' },
       ], {
-        duration: 220,
+        duration: 300,
         easing: 'ease-out',
       });
     }
