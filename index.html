@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Lin Chou's research in robot learning, world models, and efficient neural operators for physical simulation.">
+  <meta property="og:title" content="Lin Chou">
+  <meta property="og:description" content="Research in robot learning, world models, and neural operators.">
+  <title>Lin Chou</title>
+  <script>
+    (() => {
+      try {
+        const theme = localStorage.getItem('lin-chou-color-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch {}
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="page" id="home">
+    <header class="topbar">
+      <a class="wordmark" href="#home">Lin Chou</a>
+      <nav aria-label="Main navigation">
+        <a href="#home" aria-current="location">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+      </nav>
+      <button class="theme-button" type="button" aria-label="Switch color theme" aria-pressed="false" hidden>
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.8 14a8.8 8.8 0 0 1-10.9-10.9A9 9 0 1 0 20.8 14Z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <main id="content">
+      <section class="intro" aria-labelledby="name">
+        <div class="intro-cover">
+          <h1 id="name">Lin Chou</h1>
+          <div class="portrait" aria-hidden="true">
+            <span>LC</span>
+            <img alt="" width="512" height="512" fetchpriority="high" hidden>
+          </div>
+        </div>
+        <div class="intro-text">
+          <p class="affiliation">Undergraduate researcher at National Sun Yat-sen University</p>
+          <p>I study how robots can learn to predict what happens next and use those predictions to choose actions. My work spans robot learning, world models, and efficient neural operators for physical simulation.</p>
+          <ul class="profiles" aria-label="Contact and profiles">
+            <li><a href="mailto:choulin@g-mail.nsysu.edu.tw"><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Email</span></a></li>
+            <li><a href="https://github.com/choulinc"><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77 5.44 5.44 0 0 0 2.5 8.5c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"></path></svg><span>GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/choulin/"><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7m4 0v-7m0 3a3 3 0 0 1 6 0v4"></path><circle cx="8" cy="7" r=".75" fill="currentColor" stroke="none"></circle></svg><span>LinkedIn</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <article class="featured">
+          <figure class="paper-art">
+            <a href="assets/lts-poster.webp" target="_blank" rel="noopener" aria-label="View the LTS research poster" data-figure-view="poster" data-figure-alt="LTS research poster with the model architecture and benchmark results.">
+              <img src="assets/lts-architecture.webp" alt="LTS routes mesh points into latent tokens once, processes those tokens, and decodes back to the mesh at the output." width="792" height="362">
+            </a>
+            <figcaption class="badge">NeurIPS RPS</figcaption>
+          </figure>
+          <div class="entry">
+            <h3><a href="https://openreview.net/forum?id=sOyjZ39nlb">LTS: A Lightweight Persistent-Latent Reformulation of Transolver for Transient Impact Simulation</a></h3>
+            <p class="metadata">Chia Feng Liao*, <strong>Lin Chou*</strong>, Shih-Chi Wang <span class="contribution">(* equal contribution)</span></p>
+            <p class="metadata"><em>Representations for the Physical Sciences Workshop (RPS) at NeurIPS, 2026.</em></p>
+            <ul class="entry-links" aria-label="LTS resources">
+              <li><a href="https://openreview.net/forum?id=sOyjZ39nlb">Paper</a></li>
+              <li><a href="https://github.com/choulinc/LTS">Code</a></li>
+              <li><a href="assets/lts-poster.webp" target="_blank" rel="noopener" data-figure-view="poster" data-figure-alt="LTS research poster with the model architecture and benchmark results.">Poster</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="featured publication-row">
+          <figure class="paper-art">
+            <a href="assets/what-to-retain-routing.png" target="_blank" rel="noopener" aria-label="Enlarge the routing cache diagram">
+              <img src="assets/what-to-retain-routing.png" alt="A routing layer comparing a dense P cache with a projected Z cache plus softmax statistics, with cache-hit and cache-miss routes to deslice." width="1632" height="352" loading="lazy">
+            </a>
+            <figcaption class="badge">BigData IWBDR</figcaption>
+          </figure>
+          <div class="entry">
+            <h3>What to Retain in Learned Routing: Representation, Consumer Precision, and GPU Execution</h3>
+            <p class="metadata"><strong>Lin Chou</strong>, Sheng-Min Chiu</p>
+            <p class="metadata"><em>IEEE International Conference on Big Data (IEEE BigData), IWBDR-6 Workshop, 2026.</em></p>
+          </div>
+        </article>
+
+        <article class="featured publication-row">
+          <figure class="paper-art">
+            <a href="assets/ragnas-pipeline.png" target="_blank" rel="noopener" aria-label="Enlarge the RAG-NAS architecture diagram">
+              <img src="assets/ragnas-pipeline.png" alt="The three stages of RAG-NAS: knowledge-base construction, graph-aware retrieval and seed generation, and graph-constrained evolutionary search." width="2048" height="1010" loading="lazy">
+            </a>
+            <figcaption class="badge">ICASI</figcaption>
+          </figure>
+          <div class="entry">
+            <h3>RAG-NAS: Retrieval-Augmented Generation Based Efficient Knowledge-Guided Neural Architecture Search</h3>
+            <p class="metadata"><strong>Lin Chou</strong>, Ruei-Hong Lee, and Sheng-Min Chiu</p>
+            <p class="metadata"><em>IEEE International Conference on Applied System Innovation (ICASI), April 2026, Kyoto, Japan.</em></p>
+          </div>
+        </article>
+
+        <article class="publication-row entry">
+          <h3>Prior Strength and Source Attribution in Retrieval-Guided Neural Architecture Search</h3>
+          <p class="metadata"><strong>Lin Chou</strong>, Sheng-Min Chiu</p>
+          <p class="metadata"><em>Manuscript in preparation.</em></p>
+        </article>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+
+        <article class="featured">
+          <figure class="project-art dorna-demo">
+            <picture>
+              <source media="(prefers-reduced-motion: reduce)" srcset="assets/dorna2-64-newton-clean-still.webp">
+              <img src="assets/dorna2-64-newton-loop.gif" alt="A grid of 64 parallel Dorna 2 grasp trials in Newton." width="1600" height="1000" loading="lazy">
+            </picture>
+            <button class="dorna-motion-toggle" type="button" hidden>Play animation</button>
+          </figure>
+          <div class="entry">
+            <p class="metadata venue">Robot learning and simulation</p>
+            <h3>Dorna 2 Embodied Simulation</h3>
+            <p>I built a simulator that runs the five-axis Dorna 2 arm on a Linux GPU server. Newton uses MuJoCo Warp to simulate the arm, and the server streams joint states over SSH to Newton ViewerGL on a Mac. An adapter lets the official Dorna2 Python SDK send joint commands to the simulator.</p>
+            <p>I use CPU MuJoCo to check the robot model locally. For learning experiments, Isaac Lab runs batched PPO reaching tasks on Newton and MuJoCo Warp.</p>
+            <ul class="project-tags" aria-label="Dorna 2 project keywords">
+              <li>MuJoCo</li>
+              <li>Newton</li>
+              <li>MuJoCo Warp</li>
+              <li>Isaac Lab</li>
+              <li>PPO</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="featured project-row">
+          <figure class="project-art">
+            <img src="assets/scene-reconstruction.png" alt="Two top-down point cloud reconstructions of an indoor floor with estimated camera trajectories." width="900" height="612" loading="lazy">
+          </figure>
+          <div class="entry">
+            <p class="metadata venue">Robotics and spatial perception</p>
+            <h3>3D Reconstruction and Constraint-Aware Navigation</h3>
+            <p>An RGB-D reconstruction pipeline that registers point clouds and plans routes on semantic occupancy maps while checking constraints such as obstacle clearance.</p>
+            <p>Mean camera-position error was <strong>5.88 cm</strong> on a 191-frame first-floor capture. On the second floor, depth visibility of sampled navigable locations rose from <strong>94.88% to 99.77%</strong> after combining 882 observations.</p>
+            <ul class="project-tags" aria-label="3D reconstruction project keywords">
+              <li>Habitat-Sim</li>
+              <li>RGB-D</li>
+              <li>Open3D</li>
+              <li>ICP</li>
+              <li>RRT</li>
+              <li>SHACL</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Lin Chou</span>
+      <a href="#home">Back to top</a>
+    </footer>
+  </div>
+  <dialog class="figure-dialog" id="publication-figure-dialog" aria-label="Full-size publication diagram">
+    <form method="dialog">
+      <button type="submit" aria-label="Close" autofocus><span aria-hidden="true">×</span></button>
+    </form>
+    <div class="figure-scroll" tabindex="0" role="region" aria-label="Scrollable publication diagram">
+      <img alt="">
+    </div>
+  </dialog>
+</body>
+</html>
