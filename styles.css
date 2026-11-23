@@ -330,6 +330,13 @@ h1 {
 }
 .figure-scroll { overflow: auto; background: #fff; }
 .figure-scroll img { max-width: none; height: auto; }
+.figure-dialog[data-view="diagram"] { width: min(90vw, 60rem); }
+.figure-dialog[data-view="diagram"] img {
+  max-width: 100%;
+  max-height: min(65vh, calc(90vh - 5rem));
+  margin-inline: auto;
+  object-fit: contain;
+}
 .figure-dialog[data-view="poster"] .figure-scroll { background: transparent; }
 .figure-dialog[data-view="poster"] img {
   max-width: 100%;
