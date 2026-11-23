@@ -47,18 +47,3 @@ if (typeof publicationDialog.showModal === 'function') {
   }
 }
 
-const stillFrame = document.querySelector('.dorna-demo source');
-const motionButton = document.querySelector('.dorna-motion-toggle');
-const reducedMotion = window.matchMedia(stillFrame.media);
-let animationPlaying = !reducedMotion.matches;
-
-function setAnimationPlaying(playing) {
-  animationPlaying = playing;
-  stillFrame.media = playing ? 'not all' : 'all';
-  motionButton.textContent = playing ? 'Pause animation' : 'Play animation';
-}
-
-motionButton.addEventListener('click', () => setAnimationPlaying(!animationPlaying));
-reducedMotion.addEventListener('change', (event) => setAnimationPlaying(!event.matches));
-setAnimationPlaying(animationPlaying);
-motionButton.hidden = false;

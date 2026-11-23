@@ -164,15 +164,13 @@ h1 {
   letter-spacing: -.055em;
 }
 .intro-text > p {
-  max-width: 60ch;
+  max-width: 100%;
   color: var(--secondary);
   margin-top: .8rem;
 }
-.intro-text .affiliation {
-  color: var(--ink);
-  font-weight: 700;
-  margin-top: 1.15rem;
-}
+.intro-text { margin-top: 1.65rem; }
+.biography a { color: var(--badge); }
+:root[data-theme="dark"] .biography a { color: #7cc9e9; }
 .profiles {
   display: flex;
   flex-wrap: wrap;
@@ -228,6 +226,58 @@ h1 {
   line-height: 1.12;
   letter-spacing: -.04em;
 }
+.education-list {
+  display: grid;
+  gap: 1.75rem;
+}
+.education-entry {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+}
+.education-logo {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  padding: .3rem;
+  border: 1px solid var(--rule);
+  border-radius: .4rem;
+  background: #fff;
+}
+.education-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.education-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: .25rem 1.5rem;
+}
+.education-details h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+.education-details a {
+  grid-column: 1;
+  justify-self: start;
+}
+.education-details .metadata {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  white-space: nowrap;
+}
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.75rem;
+  padding: 0;
+  list-style: none;
+}
 .featured {
   display: grid;
   grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
@@ -250,18 +300,6 @@ h1 {
 .project-art { background: var(--hover); }
 .project-art picture { display: block; }
 .project-art img { width: 100%; height: auto; }
-.dorna-motion-toggle {
-  display: block;
-  min-height: 2rem;
-  margin: .35rem .6rem .35rem auto;
-  padding: .18rem .55rem;
-  border: 1px solid var(--rule);
-  border-radius: .3rem;
-  color: var(--link);
-  background: var(--paper);
-  font: inherit;
-  font-size: .875rem;
-}
 .figure-dialog {
   width: min(96vw, 104rem);
   max-width: none;
@@ -365,6 +403,15 @@ h1 {
 @media (max-width: 690px) {
   .featured { grid-template-columns: minmax(0, 1fr); }
   .featured figure { max-width: 34rem; }
+}
+@media (max-width: 560px) {
+  .education-entry {
+    grid-template-columns: 3.75rem minmax(0, 1fr);
+    gap: .85rem;
+  }
+  .education-logo { width: 3.75rem; height: 3.75rem; }
+  .education-details { grid-template-columns: minmax(0, 1fr); }
+  .education-details .metadata { grid-column: 1; grid-row: auto; }
 }
 @media (max-width: 450px) {
   .topbar { grid-template-columns: minmax(0, 1fr) auto; }
