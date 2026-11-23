@@ -297,7 +297,7 @@ h1 {
 .paper-art a { display: block; cursor: zoom-in; }
 .project-art { background: var(--hover); }
 .project-art picture { display: block; }
-.project-art img { width: 100%; height: auto; }
+.project-art img, .project-art video { display: block; width: 100%; height: auto; }
 .figure-dialog {
   width: min(96vw, 104rem);
   max-width: none;
