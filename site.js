@@ -47,3 +47,41 @@ if (typeof publicationDialog.showModal === 'function') {
   }
 }
 
+const scrollMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (typeof window.IntersectionObserver === 'function' && !scrollMotion.matches) {
+  let previousScrollY = window.scrollY;
+  let scrollDirection = 1;
+  let hasScrolled = false;
+  const visibleElements = new WeakSet();
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    scrollDirection = currentScrollY >= previousScrollY ? 1 : -1;
+    previousScrollY = currentScrollY;
+    hasScrolled = true;
+  }, { passive: true });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) {
+        visibleElements.delete(entry.target);
+        continue;
+      }
+      if (visibleElements.has(entry.target)) continue;
+      visibleElements.add(entry.target);
+      if (!hasScrolled || scrollMotion.matches) continue;
+      entry.target.animate([
+        { opacity: 0, transform: `translateY(${scrollDirection * 10}px)` },
+        { opacity: 1, transform: 'translateY(0)' },
+      ], {
+        duration: 220,
+        easing: 'ease-out',
+      });
+    }
+  }, { rootMargin: '-20px 0px -20px 0px' });
+
+  for (const element of document.querySelectorAll('.intro-text, .section > h2, .education-entry, .research-interests, .section > article')) {
+    revealObserver.observe(element);
+  }
+}
+
